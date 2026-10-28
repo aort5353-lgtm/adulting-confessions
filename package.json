@@ -1,0 +1,24 @@
+{
+  "name": "party-game",
+  "version": "1.0.0",
+  "description": "Adulting Confessions & Group Chat Court",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^4.22.3",
+    "socket.io": "^4.8.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "socket.io-client": "4.8.4"
+  }
+}

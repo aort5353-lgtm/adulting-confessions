@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: adulting-confessions
+    runtime: node
+    plan: free
+    region: virginia
+    buildCommand: npm ci --omit=dev
+    startCommand: node server.js
+    healthCheckPath: /health
+    autoDeploy: true
