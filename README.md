@@ -32,3 +32,11 @@ Env knobs: `PORT`, `T_ANSWER`, `T_GUESS`, `T_VOTE`, `T_DEFENSE`, `T_JUDGE` (seco
 - `public/index.html`: mobile-first client (single file)
 - `prompts.js`: all content
 - `test.js`: end-to-end test with 3 simulated phones
+
+## Deploy on Render (free)
+`render.yaml` defines a free Node web service (`adulting-confessions`): build `npm ci --omit=dev`,
+start `node server.js`, health check `/health`. The server binds `process.env.PORT`.
+Push this folder to a GitHub repo that Render can reach, then create the web service from it
+(or use the Blueprint). Free instances spin down after ~15 min idle and take ~30–60 s to wake;
+rooms live in memory, so a spin-down or redeploy ends any game in progress.
+Verify: `node test.js https://<service>.onrender.com`
